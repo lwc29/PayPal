@@ -1,0 +1,34 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<blockquote class="layui-elem-quote quoteBox">
+    <form class="layui-form">
+        <div class="layui-inline demoTable">
+            <label class="layui-form-label">搜索商家</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索的商家" />
+            </div>
+            <div class="layui-input-inline">
+                <label class="layui-form-label">支付时间:</label>
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="start" autocomplete="off" placeholder="开始时间">
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="end" autocomplete="off" placeholder="结束时间">
+            </div>
+            
+            <a class="layui-btn search_btn" data-type="reload">搜索</a>
+        </div>
+
+    </form>
+</blockquote>
+
+<table id="getTable" lay-filter="getTable"></table>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/Order/shouxufei.js"></script>

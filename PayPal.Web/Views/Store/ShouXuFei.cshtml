@@ -1,0 +1,53 @@
+﻿@section header
+{
+     <link href="~/Content/css/public.css" rel="stylesheet" />
+     <style type="text/css">
+         .float { float:right }
+     </style>
+}
+
+
+   <form class="layui-form" id="accountForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名:<span class="red">*</span></label>
+            <div class="layui-input-block">
+                <input type="text" id="Account" name="Account" class="layui-input" autocomplete="off" lay-verify="required" placeholder="">
+            </div>
+        </div>
+    </form>
+    <form class="layui-form" id="wxForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label">微信收款<span class="red">*</span></label>
+        <div class="layui-col-md9 layui-col-xs7">
+            <input type="number" name="WXPer" class="layui-input" oninput="if(value.length>4)value=value.slice(0,4)" autocomplete="off" lay-verify="wx" placeholder="%">
+        </div>
+        <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+    </div>
+    </form>
+    <form class="layui-form" id="aliForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">支付宝收款<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="number" name="ALIPer" class="layui-input" oninput="if(value.length>4)value=value.slice(0,4)" autocomplete="off" lay-verify="ali" placeholder="%">
+            </div>
+            <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+        </div>
+    </form>
+    <form class="layui-form" id="bankForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">银行收款<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="number" name="BANKPer" class="layui-input" oninput="if(value.length>4)value=value.slice(0,4)" autocomplete="off" lay-verify="bank" placeholder="%">
+            </div>
+            <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+        </div>
+    </form>
+    <div class="layui-form-item">
+        <p>注:以上收款单位均为<b style="color:red">%</b>;  如100元 * 1% = 1元 , 即收取1元作为平台手续费; <br /></p>
+            <em>如不足1分钱，则按0.01收取。</em>
+    </div>
+
+    <script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/Content/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/http.js"></script>
+    <script type="text/javascript" src="/js/Store/shouxufei.js"></script>

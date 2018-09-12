@@ -1,0 +1,48 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<form class="layui-form">
+    <table class="layui-table mag0">
+        <colgroup>
+            <col width="25%">
+            <col width="45%">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>参数说明</th>
+                <th>积分</th>
+                <th>变量名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>每个商户下用户每支付一笔送</td>
+                <td><input type="number" value="1" min="1" oninput="if(value.length>5)value=value.slice(0,5)" class="layui-input rule1" lay-verify="required|rule1" placeholder="单笔积分"></td>
+                <td>规则一</td>
+            </tr>
+            <tr>
+                <td>商家提现手续费 X</td>
+                <td><input type="number" value="100" min="1" oninput="if(value.length>5)value=value.slice(0,5)" class="layui-input rule2" lay-verify="required|rule2" placeholder=""></td>
+                <td>规则二</td>
+            </tr>
+            <tr>
+                <td>积分最低消费(元) X</td>
+                <td><input type="number" value="1" min="1" oninput="if(value.length>5)value=value.slice(0,5)" class="layui-input rule3" lay-verify="required|rule3" placeholder=">=元"></td>
+                <td>规则三</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="magt10 layui-right">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="rule">立即提交</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/JiFen/rule.js"></script>

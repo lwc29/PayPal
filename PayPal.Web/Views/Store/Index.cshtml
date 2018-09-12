@@ -1,0 +1,42 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<blockquote class="layui-elem-quote quoteBox">
+    <form class="layui-form">
+        <div class="layui-inline demoTable">
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索的内容" />
+            </div>
+            <div class="layui-input-inline">
+                <select name="IsActive">
+                    <option value="-1">商家状态</option>
+                    <option value="1">激活</option>
+                    <option value="0">禁用</option>
+                </select>
+            </div>
+            <a class="layui-btn search_btn" data-type="reload">搜索</a>
+        </div>
+       
+        <div class="layui-inline">
+            <a class="layui-btn layui-btn-normal Add_btn">新增商家</a>
+        </div>
+    </form>
+</blockquote>
+
+<table id="getTable" lay-filter="getTable"></table>
+<script type="text/html" id="addressTpl">
+    {{d.PName + d.CName + d.AName }} 
+</script>
+<script type="text/html" id="isActiveTpl">
+    <input type="checkbox" name="newsTop" lay-filter="newsTop" lay-skin="switch" sid="{{d.Id}}" lay-text="激活|禁用"   {{d.IsActive ? "checked" : "" }}>'
+</script>
+<script type="text/html" id="barList">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+</script>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/Store/index.js"></script>

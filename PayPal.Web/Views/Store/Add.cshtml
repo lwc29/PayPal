@@ -1,0 +1,68 @@
+﻿@section header
+{
+     <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+ <form class="layui-form" id="addForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label">商家名称<span class="red">*</span></label>
+        <div class="layui-input-block">
+            <input type="text" name="StoreName" class="layui-input" maxlength="25" autocomplete="off" lay-verify="storeName" placeholder="">
+        </div>
+    </div>
+     <div class="layui-form-item">
+         <label class="layui-form-label">选择地区<span class="red">*</span></label>
+         <div class="layui-input-inline">
+             <select name="Province" lay-verify="required" lay-filter="Province">
+                 <option></option>
+             </select>
+         </div>
+         <div class="layui-input-inline">
+             <select name="City" lay-filter="City" lay-verify="required" disabled>
+                 <option></option>
+             </select>
+         </div>
+         <div class="layui-input-inline">
+             <select name="Area" lay-filter="Area" lay-verify="required" disabled>
+                 <option></option>
+             </select>
+         </div>
+     </div>
+     <div class="layui-form-item">
+         <label class="layui-form-label">详细地址<span class="red">*</span></label>
+         <div class="layui-input-block">
+             <input type="text" name="Address" class="layui-input" maxlength="50" autocomplete="off" lay-verify="required" placeholder="">
+         </div>
+     </div>
+     <div class="layui-form-item">
+         <label class="layui-form-label">行业<span class="red">*</span></label>
+         <div class="layui-input-inline">
+             <select name="StoreType" disabled>
+                 
+             </select>
+         </div>
+     </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号<span class="red">*</span></label>
+        <div class="layui-input-block">
+            <input type="text" name="Mobile" class="layui-input" lay-verify="mobile" autocomplete="off" placeholder="">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">设备ID</label>
+        <div class="layui-input-block">
+            <input type="text" name="DeviceId" class="layui-input" autocomplete="off" placeholder="">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="Add">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+ 
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/js/Store/add.js"></script>

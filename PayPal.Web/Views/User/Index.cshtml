@@ -1,0 +1,37 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<blockquote class="layui-elem-quote quoteBox">
+    <form class="layui-form">
+        <div class="layui-inline demoTable">
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索的用户名" />
+            </div>
+            <a class="layui-btn search_btn" data-type="reload">搜索</a>
+        </div>
+    </form>
+</blockquote>
+
+<form class="layui-form layui-row layui-col-space10">
+    <div class="layui-col-md9 layui-col-xs7">
+        <table id="getTable" lay-filter="getTable"></table>
+    </div>
+    <div class="layui-col-md3 layui-col-xs12">
+        <blockquote class="layui-elem-quote title bqrole"><i class="seraph icon-caidan"></i> 角色目录</blockquote>
+        <div class="border category">
+             
+        </div>
+    </div>
+</form>
+
+<script type="text/html" id="isActiveTpl">
+    <input type="checkbox" name="newsTop" lay-filter="newsTop" lay-skin="switch" sid="{{d.Id}}" lay-text="激活|禁用"   {{d.IsActive ? "checked" : "" }}>'
+</script>
+
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/User/index.js"></script>

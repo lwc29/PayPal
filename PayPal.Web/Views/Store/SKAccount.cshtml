@@ -1,0 +1,55 @@
+﻿@section header
+{
+     <link href="~/Content/css/public.css" rel="stylesheet" />
+     <style type="text/css">
+         .float { float:right }
+     </style>
+}
+
+
+    <form class="layui-form" id="accountForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名:<span class="red">*</span></label>
+            <div class="layui-input-block">
+                <input type="text" id="Account" name="Account" class="layui-input" autocomplete="off" lay-verify="required" placeholder="">
+            </div>
+        </div>
+    </form>
+    <form class="layui-form" id="wxForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">微信账号<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="text" name="WX" class="layui-input" maxlength="30" autocomplete="off" lay-verify="required|wx" placeholder="微信账号">
+            </div>
+            <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+        </div>
+    </form>
+    <form class="layui-form" id="aliForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">支付宝账号<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="text" name="ALI" class="layui-input" maxlength="30" autocomplete="off" lay-verify="required|ali" placeholder="支付宝账号">
+            </div>
+            <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+        </div>
+    </form>
+    <form class="layui-form" id="bankForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">银行类型<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="text" name="BANKType" class="layui-input" maxlength="25" autocomplete="off" lay-verify="required" placeholder="开户行+支行">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">银行账号<span class="red">*</span></label>
+            <div class="layui-col-md9 layui-col-xs7">
+                <input type="text" name="BANK" class="layui-input" maxlength="30" autocomplete="off" lay-verify="required|bank" placeholder="银行账号">
+            </div>
+            <button class="layui-btn float" lay-submit="" lay-filter="add">生效</button>
+        </div>
+    </form>
+   
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/js/Store/skaccount.js"></script>

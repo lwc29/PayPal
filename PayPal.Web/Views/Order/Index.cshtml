@@ -1,0 +1,50 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<blockquote class="layui-elem-quote quoteBox">
+    <form class="layui-form">
+        <div class="layui-inline demoTable">
+            <label class="layui-form-label">搜索商家</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索的商家" />
+            </div>
+            <div class="layui-input-inline">
+                <label class="layui-form-label" style="width:100px">平台订单ID:</label>
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="thirdId" autocomplete="off" placeholder="平台订单ID">
+            </div>
+            <div class="layui-input-inline">
+                <label class="layui-form-label">支付时间:</label>
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="start" autocomplete="off" placeholder="开始时间">
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="end" autocomplete="off" placeholder="结束时间">
+            </div>
+            <div class="layui-input-inline">
+                <select name="PayType">
+                    <option value="0">支付渠道</option>
+                    <option value="1">支付宝</option>
+                    <option value="2">微信</option>
+                    <option value="3">京东</option>
+                    <option value="4">支付宝提现</option>
+                    <option value="5">京东提现</option>
+                </select>
+            </div>
+            <a class="layui-btn search_btn" data-type="reload">搜索</a>
+            <a class="layui-btn search_btn" data-type="add">添加</a>
+        </div>
+         
+    </form>
+</blockquote>
+
+<table id="getTable" lay-filter="getTable"></table>
+ 
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/Order/index.js"></script>

@@ -1,0 +1,49 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+ 
+
+<form class="layui-form">
+    <table class="layui-table mag0">
+        <colgroup>
+            <col width="25%">
+            <col width="45%">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>账户渠道</th>
+                <th>手续费</th>
+                <th>单位</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>支付宝收款</td>
+                <td><input type="number" name="ALI" min="1" oninput="if(value.length>3)value=value.slice(0,3)" class="layui-input rule1" lay-verify="required|rule1" placeholder="%"></td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td>微信收款</td>
+                <td><input type="number" name="WX" min="1" oninput="if(value.length>3)value=value.slice(0,3)" class="layui-input rule2" lay-verify="required|rule2" placeholder="%"></td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td>银行卡收款</td>
+                <td><input type="number" name="BANK" min="1" oninput="if(value.length>3)value=value.slice(0,3)" class="layui-input rule3" lay-verify="required|rule3" placeholder="%"></td>
+                <td>%</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="magt10 layui-right">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="rule">立即提交</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/Store/setting.js"></script>

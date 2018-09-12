@@ -1,0 +1,30 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<form class="layui-form" id="addForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label">角色名<span class="red">*</span></label>
+        <div class="layui-input-block">
+            <input type="text" name="RoleName" class="layui-input" lay-verify="required" autocomplete="off" placeholder="角色名">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block">
+            <textarea placeholder="备注" name="Remark" id="Remark" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="Add">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/js/System/roleadd.js"></script>

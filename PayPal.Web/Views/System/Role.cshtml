@@ -1,0 +1,24 @@
+﻿@section header
+{
+    <link href="~/Content/css/public.css" rel="stylesheet" />
+}
+
+<blockquote class="layui-elem-quote quoteBox">
+    <form class="layui-form">
+        <div class="layui-inline demoTable">
+            <a class="layui-btn search_btn" data-type="reload">刷新</a>
+        </div>
+
+        <div class="layui-inline">
+            <a class="layui-btn layui-btn-normal Add_btn">新增角色</a>
+        </div>
+    </form>
+</blockquote>
+
+
+<table id="getTable" lay-filter="getTable"></table>
+
+<script type="text/javascript" src="/Content/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/http.js"></script>
+<script type="text/javascript" src="/Content/layui/layui.js"></script>
+<script type="text/javascript" src="/js/System/role.js"></script>

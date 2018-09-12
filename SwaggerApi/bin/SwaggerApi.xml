@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SwaggerApi</name>
+    </assembly>
+    <members>
+        <member name="M:SwaggerApi.Controllers.UsersController.onLinePeople">
+            <summary>
+            在线人数
+            </summary>
+            <param name="token"></param>
+            <param name="requestid">备用参数.</param>
+        </member>
+        <member name="M:SwaggerApi.Controllers.UsersController.Logout(System.String,System.String)">
+            <summary>
+            注销登录
+            </summary>
+            <param name="token"></param>
+            <param name="requestid">备用参数.</param>
+        </member>
+    </members>
+</doc>
